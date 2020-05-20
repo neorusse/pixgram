@@ -16,6 +16,9 @@ import * as logger from 'morgan';
 
 export const app = express();
 
+// Importing routes
+import authRouter from './routes/AuthRoutes';
+
 /**
  *  App Configuration
  */
@@ -35,6 +38,9 @@ app.use(bodyParser.json({ limit: '5mb' }));
 app.get('/', async (req, res) => {
     res.status(200).json({ info: 'Pixgram RESTFul API Users Microservice' });
 });
+
+// ROUTES
+app.use('/api/v1/users', authRouter);
 
 app.use(
     errorhandler({

@@ -10,9 +10,9 @@
         "sourceMap": true,
         "declaration": false,
         "pretty": true,
-        "strictNullChecks": true,
+        "strictNullChecks": false,
         "skipLibCheck": true,
-        "strictPropertyInitialization": true
+        "strictPropertyInitialization": false
     },
     "exclude": ["node_modules"]
 }
