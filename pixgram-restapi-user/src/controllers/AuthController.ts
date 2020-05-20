@@ -6,10 +6,8 @@ import { hashPassword, generateToken, comparePasswords } from '../helper/appServ
 
 /**
  * User Signup
- * @param {string} firstName
- * @param {string} lastName
- * @param {string} email
- * @param {string} password
+ * @param {object} req
+ * @param {object} res
  * @returns {object} User object
  */
 export async function createUser(req: Request, res: Response) {
@@ -59,8 +57,8 @@ export async function createUser(req: Request, res: Response) {
 
 /**
  * User Login
- * @param {string} email
- * @param {string} password
+ * @param {object} req
+ * @param {object} res
  * @returns {object} User object
  */
 export async function userLogin(req: Request, res: Response) {

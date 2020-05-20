@@ -6,10 +6,10 @@ import { createUser, userLogin } from '../controllers/AuthController';
 
 const router = Router();
 
-// write payments to db
+// user signup route
 router.post('/signup', validateSignup(), validate, createUser);
 
-// write payments to db
+// user login route
 router.post('/login', validateLogin(), validate, userLogin);
 
 export default router;
