@@ -1,7 +1,6 @@
 /**
  * Required External Modules
  */
-
 import * as express from 'express';
 import * as cors from 'cors';
 import * as helmet from 'helmet';
@@ -13,21 +12,22 @@ import * as logger from 'morgan';
 /**
  * App Variables
  */
-
 export const app = express();
 
 // Importing routes
 import authRouter from './routes/AuthRoutes';
+import userRouter from './routes/UserRoutes';
 
 /**
  *  App Configuration
  */
-
 // logs HTTP requests
 app.use(logger('dev'));
+
 app.use(compression());
 app.use(helmet());
 app.use(cors());
+
 // middleware for parsing application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -39,9 +39,11 @@ app.get('/', async (req, res) => {
     res.status(200).json({ info: 'Pixgram RESTFul API Users Microservice' });
 });
 
-// ROUTES
+// Routes
 app.use('/api/v1/users', authRouter);
+app.use('/api/v1/auth', userRouter);
 
+// Error handler
 app.use(
     errorhandler({
         debug: process.env.ENV !== 'prod',
