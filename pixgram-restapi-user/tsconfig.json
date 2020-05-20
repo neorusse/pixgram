@@ -1,18 +1,18 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "noUnusedLocals": true,
-    "sourceMap": true,
-    "declaration": false,
-    "pretty": true,
-    "strictNullChecks": true,
-    "skipLibCheck": true,
-    "strictPropertyInitialization": true
-  },
-  "exclude": ["node_modules"]
+    "compileOnSave": false,
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "noUnusedLocals": true,
+        "sourceMap": true,
+        "declaration": false,
+        "pretty": true,
+        "strictNullChecks": false,
+        "skipLibCheck": true,
+        "strictPropertyInitialization": false
+    },
+    "exclude": ["node_modules"]
 }
