@@ -10,9 +10,15 @@
         "sourceMap": true,
         "declaration": false,
         "pretty": true,
+        "outDir": "./www",
         "strictNullChecks": false,
         "skipLibCheck": true,
-        "strictPropertyInitialization": false
+        "strictPropertyInitialization": false,
+        "baseUrl": "/" /* Base directory to resolve non-absolute module names. */,
+        "paths": {
+            "*": ["node_modules/*"]
+        }
     },
-    "exclude": ["node_modules"]
+    "exclude": ["node_modules"],
+    "include": ["src/**/*"]
 }
