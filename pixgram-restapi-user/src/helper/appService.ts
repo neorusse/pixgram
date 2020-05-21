@@ -3,7 +3,7 @@ import * as jwt from 'jsonwebtoken';
 
 import { Users } from '../models/Users';
 
-import { JWT_PRIVATE_KEY } from '../config/jwtConfig';
+import * as jwtKey from '../config/config';
 
 /**
  * Hash Password Method
@@ -31,7 +31,7 @@ export async function comparePasswords(password: string, hashPassword: string): 
  */
 
 export async function generateToken(user: Users): Promise<string> {
-    const token = jwt.sign(user.short(), JWT_PRIVATE_KEY, { expiresIn: '7h' });
+    const token = jwt.sign(user.short(), jwtKey.config.jwt.secret, { expiresIn: '7h' });
 
     return token;
 }
