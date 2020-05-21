@@ -2,7 +2,6 @@
  * Required External Modules
  */
 import * as express from 'express';
-import * as cors from 'cors';
 import * as helmet from 'helmet';
 import * as compression from 'compression';
 import * as bodyParser from 'body-parser';
@@ -29,7 +28,13 @@ app.use(logger('dev'));
 
 app.use(compression());
 app.use(helmet());
-app.use(cors());
+
+//CORS Should be restricted
+app.use(function (req, res, next) {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
+    next();
+});
 
 // middleware for parsing application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
