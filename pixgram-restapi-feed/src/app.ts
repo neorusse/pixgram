@@ -9,12 +9,18 @@ import * as compression from 'compression';
 import * as bodyParser from 'body-parser';
 import * as errorhandler from 'strong-error-handler';
 import * as logger from 'morgan';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 /**
  * App Variables
  */
 
 export const app = express();
+
+// Importing routes
+import feedRouter from './routes/FeedRoutes';
 
 /**
  *  App Configuration
@@ -35,6 +41,9 @@ app.use(bodyParser.json({ limit: '5mb' }));
 app.get('/', async (req, res) => {
     res.status(200).json({ info: 'Pixgram RESTFul API Feeds Microservice' });
 });
+
+// Routes
+app.use('/api/v1/feeds', feedRouter);
 
 app.use(
     errorhandler({

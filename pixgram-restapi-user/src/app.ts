@@ -8,6 +8,9 @@ import * as compression from 'compression';
 import * as bodyParser from 'body-parser';
 import * as errorhandler from 'strong-error-handler';
 import * as logger from 'morgan';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 /**
  * App Variables
