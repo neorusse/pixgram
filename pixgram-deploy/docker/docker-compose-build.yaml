@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  reverseproxy:
+    build:
+      context: .
+    image: ecoden/reverseproxy
+
+  backend_user:
+    build:
+      context: ../../restapi-user
+    image: ecoden/pixgram-restapi-user
+
+  backend_feed:
+    build:
+      context: ../../restapi-feed
+    image: ecoden/pixgram-restapi-feed
+
+  frontend:
+    build:
+      context: ../../client-frontend
+    image: ecoden/pixgram-frontend:local
