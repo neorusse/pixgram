@@ -1,16 +1,16 @@
 export const config = {
     dev: {
-        username: 'postgres',
-        password: 'topple',
-        database: 'pixgramdb',
-        host: 'localhost',
+        username: process.env.POSTGRESS_USERNAME,
+        password: process.env.POSTGRESS_PASSWORD,
+        database: process.env.POSTGRESS_DB,
+        host: process.env.POSTGRESS_HOST,
         dialect: 'postgres',
         operatorsAliases: false,
     },
     prod: {
-        username: 'root',
-        password: 'topple',
-        database: 'database_production',
+        username: '',
+        password: '',
+        database: '',
         host: '127.0.0.1',
         dialect: 'mysql',
         operatorsAliases: false,
