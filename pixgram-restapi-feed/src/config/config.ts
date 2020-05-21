@@ -18,4 +18,7 @@ export const config = {
         dialect: 'mysql',
         operatorsAliases: false,
     },
+    jwt: {
+        secret: process.env.JWT_SECRET,
+    },
 };
