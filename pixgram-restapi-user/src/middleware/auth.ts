@@ -1,6 +1,6 @@
 import * as jwt from 'jsonwebtoken';
 
-import { JWT_PRIVATE_KEY } from '../config/jwtConfig';
+import * as jwtKey from '../config/config';
 
 export const auth = (req: any, res: any, next: any) => {
     // extract token
@@ -9,7 +9,7 @@ export const auth = (req: any, res: any, next: any) => {
     if (!token) return res.status(401).send('Access denied, no token provided');
 
     try {
-        const decoded = jwt.verify(token, JWT_PRIVATE_KEY);
+        const decoded = jwt.verify(token, jwtKey.config.jwt.secret);
         req.user = decoded;
 
         next();
