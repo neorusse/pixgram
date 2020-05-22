@@ -50,7 +50,11 @@ export async function createUser(req: Request, res: Response) {
     // Generate JWT
     const jwt = await generateToken(savedUser);
 
-    res.status(201).json({ token: jwt, user: savedUser.short() });
+    res.status(201).json({
+        token: jwt,
+        message: 'User registration successful',
+        user: savedUser.short(),
+    });
 
     return;
 }
