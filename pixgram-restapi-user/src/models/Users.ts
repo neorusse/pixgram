@@ -24,6 +24,8 @@ export class Users extends Model<Users> {
 
     short(): object {
         return {
+            firstname: this.firstName,
+            lastname: this.lastName,
             email: this.email,
         };
     }
