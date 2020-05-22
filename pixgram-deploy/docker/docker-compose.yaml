@@ -4,7 +4,7 @@ services:
   reverseproxy:
     image: ecoden/reverseproxy
     ports:
-      - 8080:8080
+      - 7070:7070
     restart: always
     depends_on:
       - backend-user
