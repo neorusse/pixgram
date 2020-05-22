@@ -1,4 +1,4 @@
-version: "3"
+version: '3'
 
 services:
   reverseproxy:
@@ -8,15 +8,15 @@ services:
 
   backend_user:
     build:
-      context: ../../restapi-user
+      context: ../../pixgram-restapi-user
     image: ecoden/pixgram-restapi-user
 
   backend_feed:
     build:
-      context: ../../restapi-feed
+      context: ../../pixgram-restapi-feed
     image: ecoden/pixgram-restapi-feed
 
   frontend:
     build:
-      context: ../../client-frontend
+      context: ../../pixgram-client
     image: ecoden/pixgram-frontend:local
