@@ -215,7 +215,7 @@ const Register = (props) => {
 							</div>
 
 							<div className="form-group">
-								<button className="btn btn-primary btn-block">Sign Up</button>
+								<button className="btn btn-secondary btn-block">Sign Up</button>
 							</div>
 						</div>
 					)}
