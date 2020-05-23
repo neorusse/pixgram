@@ -1,32 +1,83 @@
+.caption-text {
+  font-size: 38px;
+  line-height: 45px;
+  color: #191919;
+  font-weight: bold;
+}
+
+.caption-text-sub {
+  font-size: 17px;
+  color: #000000;
+}
+
+.landing-btn {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  color: #fff;
+  width: 245px;
+  height: 55px;
+  border-radius: 30px;
+  background-image: linear-gradient(285deg, #f00b51, #e20082);
+  margin-top: 2%;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #212529;
+  font-size: 16.5px;
+}
+
 label {
-	display: block;
-	margin-top: 10px;
+  display: block;
+  margin-top: 10px;
 }
 
 .card-container.card {
-	max-width: 350px !important;
-	padding: 40px 40px;
+  max-width: 360px !important;
+  padding: 30px 30px;
 }
 
 .card {
-	background-color: #f7f7f7;
-	padding: 20px 25px 30px;
-	margin: 0 auto 25px;
-	margin-top: 50px;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	border-radius: 2px;
-	-moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	-webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  background-color: #f7f7f7;
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  margin-top: 40px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .profile-img-card {
-	width: 96px;
-	height: 96px;
-	margin: 0 auto 10px;
-	display: block;
-	-moz-border-radius: 50%;
-	-webkit-border-radius: 50%;
-	border-radius: 50%;
+  width: 78px;
+  height: 78px;
+  margin: 0 auto 10px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+
+
+@media (max-width: 576px) {
+
+  .caption-text {
+    font-size: 35px;
+    line-height: 42px;
+  }
+
+  .landing-btn {
+    font-size: 14px;
+    padding: 1rem 1.2rem;
+    width: 200px;
+    height: 50px;
+    font-weight: 500;
+  }
+
 }
