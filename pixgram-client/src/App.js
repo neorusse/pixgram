@@ -27,15 +27,19 @@ const App = () => {
 
 	return (
 		<Router>
-			<div>
-				<nav className="navbar navbar-expand navbar-dark bg-dark">
+			<div class="container">
+				<nav className="navbar navbar-expand navbar-light">
 					<Link to={'/'} className="navbar-brand">
-						PixGram
+						<img
+							src="./pixgram-logo.png"
+							class="img-fluid"
+							alt="Pixgram logo"
+						></img>
 					</Link>
 					{currentUser ? (
 						<div className="navbar-nav ml-auto">
 							<li className="nav-item">
-								<Link to={'/profile'} className="nav-link">
+								<Link to={'/profile'} className="nav-link mr-3">
 									{`${currentUser.user.firstname.toUpperCase()} ${currentUser.user.lastname.toUpperCase()}`}
 								</Link>
 							</li>
@@ -48,7 +52,7 @@ const App = () => {
 					) : (
 						<div className="navbar-nav ml-auto">
 							<li className="nav-item">
-								<Link to={'/login'} className="nav-link">
+								<Link to={'/login'} className="nav-link mr-3">
 									Login
 								</Link>
 							</li>
